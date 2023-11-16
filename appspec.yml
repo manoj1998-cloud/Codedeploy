@@ -5,11 +5,11 @@ files:
     destination: /root/efs/nginx/Source_Code/html/
 hooks:
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: /stop_server
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: scripts/start_server
+    - location: /start_server
       timeout: 300
       runas: root
   
